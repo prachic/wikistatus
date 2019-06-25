@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>wikistats</groupId>
+	<artifactId>wikistats</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>wikistats</name>
+	
+	<!-- Dependency version & properties -->
+	<properties>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<dependencies.slf4j.version>1.7.13</dependencies.slf4j.version>
+		<dependencies.slf4j.scope />
+
+		<dependencies.slf4j.api.version>${dependencies.slf4j.version}</dependencies.slf4j.api.version>
+		<dependencies.slf4j.log4j.version>${dependencies.slf4j.version}</dependencies.slf4j.log4j.version>
+		<dependencies.slf4j.log4j.scope>runtime</dependencies.slf4j.log4j.scope>
+
+		<dependencies.spark.version>2.2.0</dependencies.spark.version>
+		<dependencies.mongo-postgres-etl-version>1.0.5-SNAPSHOT</dependencies.mongo-postgres-etl-version>
+		<dependencies.spark.scope />
+
+		<dependencies.spark.core.version>${dependencies.spark.version}</dependencies.spark.core.version>
+		<dependencies.spark.core.scope>${dependencies.spark.scope}</dependencies.spark.core.scope>
+
+		<dependencies.junit.version>4.12</dependencies.junit.version>
+	</properties>
+
+	<!-- Dependencies -->
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.11</artifactId>
+			<version>${dependencies.spark.core.version}</version>
+			<scope>${dependencies.spark.core.scope}</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.11</artifactId>
+			<version>${dependencies.spark.core.version}</version>
+			<scope>${dependencies.spark.core.scope}</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${dependencies.slf4j.api.version}</version>
+			<scope>${dependencies.slf4j.api.scope}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${dependencies.slf4j.log4j.version}</version>
+			<scope>${dependencies.slf4j.log4j.scope}</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${dependencies.junit.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+  			<artifactId>mysql-connector-java</artifactId>
+  			<version>8.0.16</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
