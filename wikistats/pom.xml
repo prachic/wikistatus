@@ -29,7 +29,7 @@
 		<dependencies.spark.core.version>${dependencies.spark.version}</dependencies.spark.core.version>
 		<dependencies.spark.core.scope>${dependencies.spark.scope}</dependencies.spark.core.scope>
 
-		<dependencies.junit.version>4.12</dependencies.junit.version>
+		<dependencies.junit.version>4.13.1</dependencies.junit.version>
 	</properties>
 
 	<!-- Dependencies -->
